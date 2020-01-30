@@ -1,0 +1,20 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: 'Commit Numbers Today'
+description: 'get someone commit numbers today'
+author: 'yiliang114'
+branding:
+  color: 'purple'
+  icon: 'aperture'
+
+inputs:
+  username:
+    description: 'GitHub user who you want to get commits numbers today'
+    required: true
+
+outputs:
+  sum: # id of the output
+    description: 'The sum of the commits today'
+
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
