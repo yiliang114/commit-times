@@ -14,4 +14,4 @@ jobs:
         with:
           username: 'yiliang114'
       - name: Get the output sum
-        run: echo "Today ${{ steps.test.inputs.username }} has committed ${{ steps.test.outputs.sum }} times."
+        run: echo "Today ${{ steps.test.outputs.username }} has committed ${{ steps.test.outputs.sum }} times."

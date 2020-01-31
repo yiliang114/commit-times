@@ -12,6 +12,8 @@ inputs:
     required: true
 
 outputs:
+  username:
+    description: 'GitHub user who you want to gain commit times today'
   sum:
     description: 'The sum of commit times today'
 
