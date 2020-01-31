@@ -1,5 +1,5 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: 'gain-commit-times-of-github'
+name: 'commit times'
 description: 'get someone commit times today'
 author: 'yiliang114'
 branding:
