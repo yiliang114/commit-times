@@ -7,20 +7,14 @@ branding:
   icon: 'aperture'
 
 inputs:
-  who-to-greet: # 输入 id
-    description: 'Who to greet'
+  username:
+    description: 'GitHub user who you want to get commits numbers today'
     required: true
-    default: 'World'
-  # username:
-  #   description: 'GitHub user who you want to get commits numbers today'
-  #   required: true
-  #   default: 'yiliang114'
+    default: 'yiliang114'
 
 outputs:
-  time: # 输出 id
-    description: 'The time we greeted you'
-  # sum: # id of the output
-  #   description: 'The sum of the commits today'
+  sum: # id of the output
+    description: 'The sum of the commits today'
 
 runs:
   using: 'node12'

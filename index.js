@@ -1,21 +1,21 @@
 /*
  * @Author: mrjzhang
  * @Date: 2020-01-30 14:11:30
- * @LastEditors: mrjzhang
- * @LastEditTime: 2020-01-30 14:11:33
+ * @LastEditors  : mrjzhang
+ * @LastEditTime : 2020-01-31 12:24:45
  */
 const core = require('@actions/core')
 const github = require('@actions/github')
 
+const { getSum } = require('./lib')
+
 try {
-  // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet')
-  console.log(`Hello ${nameToGreet}!`)
-  const time = new Date().toTimeString()
-  core.setOutput('time', time)
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`)
+  const username = core.getInput('username')
+  console.log(`Hello ${username}!`)
+
+  getSum().then(sum => {
+    core.setOutput('sum', sum)
+  })
 } catch (error) {
   core.setFailed(error.message)
 }

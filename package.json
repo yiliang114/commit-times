@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/yiliang114/commit-nums-today/issues"
   },
-  "homepage": "https://github.com/yiliang114/commit-nums-today#readme"
+  "homepage": "https://github.com/yiliang114/commit-nums-today#readme",
+  "devDependencies": {
+    "@actions/core": "^1.2.2",
+    "@actions/github": "^2.1.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
 }
