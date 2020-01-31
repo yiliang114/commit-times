@@ -2,7 +2,7 @@
  * @Author: mrjzhang
  * @Date: 2020-01-30 14:19:40
  * @LastEditors  : mrjzhang
- * @LastEditTime : 2020-01-31 12:24:00
+ * @LastEditTime : 2020-01-31 12:52:41
  */
 
 let https = require('https')
@@ -11,10 +11,13 @@ let cheerio = require('cheerio')
 let dataUrl = 'https://github.com/yiliang114'
 
 //根据得到的数据，处理得到自己想要的
-function getData(str) {
-  let $ = cheerio.load(str)
-  let arr = $('g[transform]:last-of-type > rect:last-child')
+function getData(str, nth = 0) {
+  const $ = cheerio.load(str)
+  const arr = $('g[transform]:last-of-type > rect:last-child')
   const target = arr[0]
+  if (!arr || !arr[0]) {
+    throw new Error('can not find it')
+  }
   const sum = target.attribs['data-count']
   return sum
 }
@@ -31,6 +34,7 @@ function getSum() {
       res.on('end', function() {
         //调用下方的函数，得到返回值，即是我们想要的img的src
         let data = getData(str)
+        console.log(data)
         resolve(data)
       })
     })

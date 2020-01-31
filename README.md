@@ -1,25 +1,21 @@
-# Hello world javascript action
+# Gain Commit Times Of Github Javascript Action
 
-此操作将 "Hello World" 或 "Hello" + 要问候的人员的姓名打印到日志。
+此 Action 能够获取某一个 github 账户今天的提交次数并输出。
 
 ## Inputs
 
-### `who-to-greet`
+### `username`
 
-**必填** 要问候的人员的姓名。 默认值为 `"World"`。
+**必填** 要获取的 github 用户名。
 
 ## Outputs
 
-### `time`
+### `sum`
 
-我们问候您的时间。
+今天改用户提交 github 的次数。（以主页显示的提交次数为准）
 
 ## Example usage
 
-使用：actions/hello-world-javascript-action@v1
+使用：actions/gain-commit-times-of-github@v1
 及：
-who-to-greet: 'Mona the Octocat'
-
-### commit-nums-today
-
-获取某一个 github 账户今天的提交次数
+username: 'yiliang114'
