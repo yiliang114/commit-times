@@ -3,16 +3,15 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to gain sum of github commits today
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: gain sum of github commits today
         uses: ./ # Uses an action in the root directory
-        id: hello
+        id: test
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          username: 'yiliang114'
+      - name: Get the output sum
+        run: echo "Today ${{ steps.test.inputs.username }} has committed ${{ steps.test.outputs.sum }} times."
