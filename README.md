@@ -14,6 +14,10 @@
 
 今天改用户提交 github 的次数。（以主页显示的提交次数为准）
 
+### `username`
+
+获取的 github 用户名。
+
 ## Example usage
 
 使用：actions/gain-commit-times-of-github@v1
