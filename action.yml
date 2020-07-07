@@ -1,22 +1,22 @@
 # https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: 'commit times'
-description: 'get someone commit times today'
-author: 'yiliang114'
+name: "commit times"
+description: "get someone commit times today"
+author: "yiliang114"
 branding:
-  color: 'purple'
-  icon: 'aperture'
+  color: "purple"
+  icon: "aperture"
 
 inputs:
   username:
-    description: 'GitHub user who you want to gain commit times today'
+    description: "GitHub user who you want to gain commit times today"
     required: true
 
 outputs:
   username:
-    description: 'GitHub user who you want to gain commit times today'
+    description: "GitHub user who you want to gain commit times today"
   sum:
-    description: 'The sum of commit times today'
+    description: "The sum of commit times today"
 
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "node12"
+  main: "index.js"
