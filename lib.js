@@ -5,10 +5,10 @@
  * @LastEditTime : 2020-01-31 12:52:41
  */
 
-let https = require('https');
-let cheerio = require('cheerio');
-//准备抓取的网站链接
-let dataUrl = 'https://github.com/';
+const https = require('https');
+const cheerio = require('cheerio');
+// 准备抓取的网站链接
+const dataUrl = 'https://github.com/';
 
 //根据得到的数据，处理得到自己想要的
 function getData(str, nth = 0) {
@@ -34,7 +34,7 @@ function getSum(username) {
       //数据获取完毕
       res.on('end', function () {
         //调用下方的函数，得到返回值，即是我们想要的img的src
-        let data = getData(str);
+        const data = getData(str);
         console.log(data);
         resolve(data);
       });

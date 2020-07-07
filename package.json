@@ -1,6 +1,6 @@
 {
   "name": "commit-nums-today",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "获取某一个 github 账户今天的提交次数",
   "main": "index.js",
   "scripts": {
